@@ -17,16 +17,12 @@ const Clock = () => {
     }, [currentDate])
 
     return (
-        <div className="clock__container">
-            <div className="clock">
+      <>
+        <ClockDate date={currentDate}/>
+        <ClockTime date={currentDate}/>
+     </>
 
-                <ClockDate date={currentDate}/>
-
-                <ClockTime date={currentDate}/>
-
-            </div>
-        </div>
-    )
+)
 }
 
 

@@ -14,7 +14,10 @@ const HBooks = () => {
             clearTimeout(timerRef.current);
         };
     }, []);
-    return <h2>{text}</h2>;
+    return (
+
+        <h2>{text}</h2>
+)
 };
 
 export default HBooks;

@@ -4,11 +4,11 @@ const ClockDate = ({date}) => {
     const dateString = date.toLocaleDateString();
 
     return (
-        <h4>{dateString}</h4>
+
+            <p>{dateString}</p>
+
     )
 }
-
-
 
 export default ClockDate
 

@@ -31,12 +31,14 @@ function BooksSearch () {
     }
 
     return (
-        <div className="App">
+        <div className="search_input">
             <input
                 type="text"
                 value={searchItem}
                 onChange={handleInputChange}
                 placeholder='What would You like to rad today ?'
+                maxLength="50"
+                size="50"
             />
             {loading ? (
                 <div>Loading...</div>
