@@ -1,14 +1,11 @@
 import React from "react";
 
-const Date = ({date}) => {
-    const dateString = date.toLocaleDateString();
+const ClockTime = ({date}) => {
+    const timeString = date.toLocaleTimeString();
 
     return (
-        <h2>{dateString}</h2>
+        <h4>{timeString}</h4>
     )
 }
 
-
-
-export default Date
-
+export default ClockTime
