@@ -36,13 +36,13 @@ function BooksSearch () {
                 type="text"
                 value={searchItem}
                 onChange={handleInputChange}
-                placeholder='Wyszukaj książkę'
+                placeholder='What would You like to rad today ?'
             />
             {loading ? (
                 <div>Loading...</div>
             ) : (
                 <>
-                    <h1>Books</h1>
+                    <h3>Bookshelf</h3>
                     <table border={1}>
                         <tr>
                             <th>Tytuł</th>

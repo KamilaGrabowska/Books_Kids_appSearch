@@ -3,28 +3,31 @@ import ClockDate from "./ClockDate.jsx"
 import ClockTime from "./ClockTime.jsx"
 
 
-
-const Clock = ()=> {
-    const [currentDate,setCurrentDate] = useState(new Date())
+const Clock = () => {
+    const [currentDate, setCurrentDate] = useState(new Date())
 
     useEffect(() => {
-        const interval = setInterval( () => {
+        const interval = setInterval(() => {
             setCurrentDate(new Date())
         }, 1000);
 
         return () => {
             clearInterval(interval)
         }
-    },[currentDate])
+    }, [currentDate])
 
     return (
-        <div>
-            <ClockDate date={currentDate}/>
-            <ClockTime date={currentDate}/>
+        <div className="clock__container">
+            <div className="clock">
+
+                <ClockDate date={currentDate}/>
+
+                <ClockTime date={currentDate}/>
+
+            </div>
         </div>
     )
 }
-
 
 
 export default Clock
