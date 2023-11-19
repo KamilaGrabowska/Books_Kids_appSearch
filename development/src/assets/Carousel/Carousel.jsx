@@ -78,7 +78,7 @@ const Carousel = () => {
                     type="text"
                     value={searchItem}
                     onChange={handleInputChange}
-                    placeholder='Car'
+                    placeholder='Szukaj '
                     maxLength="50"
                     size="50"
                 />

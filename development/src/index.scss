@@ -1,4 +1,10 @@
+@import "untils/variables";
+
 :root {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  color: $font-color;
 
 }
 
@@ -10,13 +16,6 @@ html, body {
   margin: 0 auto;
   max-width: 1366px;
   padding: 0;
-  box-sizing: border-box;
-  background-color: linen;
-
-
+  height: 100vh;
 }
 
-//.app {
-//  width: 100%;
-//  height: 100vh;
-//}

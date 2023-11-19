@@ -1,70 +1,71 @@
-import {useEffect, useState} from "react";
-
-
-function BooksSearch () {
-    const [books, setBooks] = useState([]);
-    const [filteredBooks, setFilteredBooks] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [searchItem, setSearchItem] = useState('')
-
-    useEffect(() => {
-        setLoading(false);
-        fetch("https://run.mocky.io/v3/99225ede-0231-4a93-9d0c-830cf635d065")
-            .then((response) => response.json())
-            .then((json) => {
-                setBooks(json)
-                setFilteredBooks(json)
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, []);
-
-    const handleInputChange = (e) => {
-        const searchTerm = e.target.value;
-        setSearchItem(searchTerm)
-
-        const filteredItems = books.filter((book) =>
-            book.title.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        setFilteredBooks(filteredItems)
-    }
-
-    return (
-        <div className="search_input">
-            <input
-                type="text"
-                value={searchItem}
-                onChange={handleInputChange}
-                placeholder='Co chciałabyś dziś przeczytać ?'
-                maxLength="50"
-                size="50"
-            />
-            {loading ? (
-                <div>Loading...</div>
-            ) : (
-                <>
-                    <h3>Bookshelf</h3>
-                    <table className="table" border={1}>
-                        {/*<tr>*/}
-                        {/*    <th>Tytuł</th>*/}
-                        {/*    <th>ISBN</th>*/}
-                        {/*    <th>Autor</th>*/}
-                        {/*    <th>Okładka</th>*/}
-                        {/*</tr>*/}
-                        {filteredBooks.map((book) => (
-                            <tr className="table__row" key={book.id}>
-                                {/*<td>{book.title}</td>*/}
-                                {/*<td>{book.isbn}</td>*/}
-                                {/*<td>{book.author.fullname}</td>*/}
-                                <td><img src={book.cover} alt=""/></td>
-                            </tr>
-                        ))}
-                    </table>
-                </>
-            )}
-        </div>
-    );
-}
-
-export default BooksSearch;
+// import {useEffect, useState} from "react";
+//
+//
+// function BooksSearch () {
+//     const [books, setBooks] = useState([]);
+//     const [filteredBooks, setFilteredBooks] = useState([]);
+//     const [loading, setLoading] = useState(false);
+//     const [searchItem, setSearchItem] = useState('')
+//
+//     useEffect(() => {
+//         setLoading(false);
+//         fetch("https://run.mocky.io/v3/99225ede-0231-4a93-9d0c-830cf635d065")
+//             .then((response) => response.json())
+//             .then((json) => {
+//                 setBooks(json)
+//                 setFilteredBooks(json)
+//             })
+//             .finally(() => {
+//                 setLoading(false);
+//             });
+//     }, []);
+//
+//     const handleInputChange = (e) => {
+//         const searchTerm = e.target.value;
+//         setSearchItem(searchTerm)
+//
+//         const filteredItems = books.filter((book) =>
+//             book.title.toLowerCase().includes(searchTerm.toLowerCase())
+//         );
+//         setFilteredBooks(filteredItems)
+//     }
+//
+//     return (
+//         <div className="search_input">
+//             <input
+//                 type="text"
+//                 value={searchItem}
+//                 onChange={handleInputChange}
+//                 placeholder='Co chciałabyś dziś przeczytać ?'
+//                 maxLength="50"
+//                 size="50"
+//             />
+//             {loading ? (
+//                 <div>Loading...</div>
+//             ) : (
+//                 <>
+//                     <h3>Bookshelf</h3>
+//                     <table className="table" border={1}>
+//                         {/*<tr>*/}
+//                         {/*    <th>Tytuł</th>*/}
+//                         {/*    <th>ISBN</th>*/}
+//                         {/*    <th>Autor</th>*/}
+//                         {/*    <th>Okładka</th>*/}
+//                         {/*</tr>*/}
+//                         {filteredBooks.map((book) => (
+//                             <tr className="table__row" key={book.id}>
+//                                 {/*<td>{book.title}</td>*/}
+//                                 {/*<td>{book.isbn}</td>*/}
+//                                 {/*<td>{book.author.fullname}</td>*/}
+//                                 <td><img src={book.cover} alt=""/></td>
+//                             </tr>
+//                         ))}
+//                     </table>
+//                 </>
+//             )}
+//         </div>
+//     );
+// }
+//
+// export default BooksSearch;
+//
