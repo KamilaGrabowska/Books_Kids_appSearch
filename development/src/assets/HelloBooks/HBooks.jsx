@@ -6,7 +6,7 @@ const HBooks = () => {
 
     useEffect(() => {
         timerRef.current = setTimeout(() => {
-            setText("Zapraszam do lektury");
+            setText("Czytanie książek to najpiękniejsza zabawa, jaką sobie ludzkość wymyśliła” Wisława Szymborska");
         }, 10000);
 
         return () => {

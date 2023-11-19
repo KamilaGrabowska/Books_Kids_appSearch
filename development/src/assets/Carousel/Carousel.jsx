@@ -1,49 +1,107 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "./Carousel.scss"
-const Carousel= () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
 
-    const slides = document.querySelectorAll(".slide");
+const Carousel = () => {
+    const carouselSize = 3;
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [slidesLength, setSlidesLength] = useState(0)
 
     const showSlide = (index) => {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? "block" : "none";
+        document.querySelectorAll(".slide").forEach((slide, i) => {
+            if (slidesLength <= carouselSize) {
+                slide.style.display = "block"
+            } else {
+                if (i >= index && i < currentIndex + carouselSize){
+                    slide.style.display = "block"
+                } else {
+                    slide.style.display = "none"
+                }
+            }
         });
     };
 
     const goToSlide = (index) => {
         setCurrentIndex(index);
     };
-
     const goToNextSlide = () => {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        goToSlide(nextIndex);
+        const nextIndex = (currentIndex + 1) % slidesLength;
+        if(nextIndex + carouselSize <= slidesLength){
+            goToSlide(nextIndex);
+        }
     };
 
     const goToPrevSlide = () => {
-        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(prevIndex);
+        const prevIndex = (currentIndex - 1 + slidesLength) % slidesLength;
+        if(prevIndex + carouselSize <= slidesLength){
+            goToSlide(prevIndex);
+        }
     };
+
+    const [carouselLoading, setCarouselLoading] = useState(true);
+    const [carouselBooks, setCarouselBooks] = useState([]);
+    const [filteredCarouselBooks, setCarouselFilteredBooks] = useState([]);
+    const [searchItem, setSearchItem] = useState('')
+
+    useEffect(() => {
+        fetch("https://run.mocky.io/v3/99225ede-0231-4a93-9d0c-830cf635d065")
+            .then((response) => response.json())
+            .then((json) => {
+                setCarouselBooks(json)
+                setCarouselFilteredBooks(json)
+                setSlidesLength(json.length)
+            })
+            .finally(() => {
+                setCarouselLoading(false);
+            });
+    }, []); //Without [] it doesn't reload the state
+
+    const handleInputChange = (e) => {
+        const searchTerm = e.target.value;
+        setSearchItem(searchTerm)
+
+        const filteredItems = carouselBooks.filter((book) =>
+            book.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setSlidesLength(filteredItems.length)
+        setCurrentIndex(0)
+        setCarouselFilteredBooks(filteredItems)
+    }
 
     useEffect(() => {
         showSlide(currentIndex);
     }, [currentIndex]);
 
     return (
-        <>
-        <div className="carousel_slide">
+        <div className="carousel">
+            <div className="search_input">
+                <input
+                    type="text"
+                    value={searchItem}
+                    onChange={handleInputChange}
+                    placeholder='Car'
+                    maxLength="50"
+                    size="50"
+                />
+            </div>
 
-            <div className="slide">Slide 1</div>
-            <div className="slide">Slide 2</div>
-            <div className="slide">Slide 3</div>
-        </div>
-
+            {carouselLoading ? (<div>Carousel Loading...</div>) : (
+                <div className="carouselItems">
+                    {filteredCarouselBooks.map((book, index) => (
+                        <div className={`slide slide__${index}`}
+                             style={index < carouselSize ? {display: 'block'} : {display: 'none'}}
+                        >
+                            <img src={book.cover} alt=""/>
+                        </div>)
+                    )}
+                </div>
+            )}
             <div className="carousel_btn">
-            <button className="btn__prev" onClick={goToPrevSlide}>Previous</button>
-            <button className="btn__next" onClick={goToNextSlide}>Next</button>
+                <button className="btn__prev" onClick={goToPrevSlide}>Previous</button>
+                <button className="btn__next" onClick={goToNextSlide}>Next</button>
+            </div>
         </div>
-        </>
     );
+
 };
 
 export default Carousel

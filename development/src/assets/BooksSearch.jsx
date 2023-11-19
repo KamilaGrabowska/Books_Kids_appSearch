@@ -8,7 +8,7 @@ function BooksSearch () {
     const [searchItem, setSearchItem] = useState('')
 
     useEffect(() => {
-        setLoading(true);
+        setLoading(false);
         fetch("https://run.mocky.io/v3/99225ede-0231-4a93-9d0c-830cf635d065")
             .then((response) => response.json())
             .then((json) => {
@@ -36,7 +36,7 @@ function BooksSearch () {
                 type="text"
                 value={searchItem}
                 onChange={handleInputChange}
-                placeholder='What would You like to rad today ?'
+                placeholder='Co chciałabyś dziś przeczytać ?'
                 maxLength="50"
                 size="50"
             />
@@ -45,18 +45,18 @@ function BooksSearch () {
             ) : (
                 <>
                     <h3>Bookshelf</h3>
-                    <table border={1}>
-                        <tr>
-                            <th>Tytuł</th>
-                            <th>ISBN</th>
-                            <th>Autor</th>
-                            <th>Okładka</th>
-                        </tr>
+                    <table className="table" border={1}>
+                        {/*<tr>*/}
+                        {/*    <th>Tytuł</th>*/}
+                        {/*    <th>ISBN</th>*/}
+                        {/*    <th>Autor</th>*/}
+                        {/*    <th>Okładka</th>*/}
+                        {/*</tr>*/}
                         {filteredBooks.map((book) => (
-                            <tr key={book.id}>
-                                <td>{book.title}</td>
-                                <td>{book.isbn}</td>
-                                <td>{book.author.fullname}</td>
+                            <tr className="table__row" key={book.id}>
+                                {/*<td>{book.title}</td>*/}
+                                {/*<td>{book.isbn}</td>*/}
+                                {/*<td>{book.author.fullname}</td>*/}
                                 <td><img src={book.cover} alt=""/></td>
                             </tr>
                         ))}

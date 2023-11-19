@@ -10,6 +10,17 @@
 }
 .h3{}
 
+.table{
+  display: flex;
+}
+.table__row{
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+
+
+}
+
 
 //body {
 //  margin-top: 20px;
