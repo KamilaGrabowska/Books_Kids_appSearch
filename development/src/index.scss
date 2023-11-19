@@ -1,10 +1,11 @@
 @import "untils/variables";
 
 :root {
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  font-weight: 300;
-  color: $font-color;
+  --base-font-family: "Times New Roman",sans-serif;;
+  --base--font-size: 16px;
+  --base-font-weight: 300;
+  --base-font-color: rgba(0, 0, 0, 1);
+
 
 }
 
