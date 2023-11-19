@@ -1,6 +1,10 @@
+@import "../../untils/variables";
+
 p {
-  color: pink;
+  color: $font-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
   display: flex;
   justify-content: flex-end;
-
-}
+  margin: 10px 20px;
+  }

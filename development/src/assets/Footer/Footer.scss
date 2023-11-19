@@ -1,0 +1,22 @@
+@import "../../untils/variables";
+
+footer-container {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer-item__icon {
+  margin-right: 10px;
+  font-size: 24px;
+}

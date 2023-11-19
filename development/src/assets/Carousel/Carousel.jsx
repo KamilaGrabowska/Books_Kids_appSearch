@@ -11,7 +11,7 @@ const Carousel = () => {
             if (slidesLength <= carouselSize) {
                 slide.style.display = "block"
             } else {
-                if (i >= index && i < currentIndex + carouselSize){
+                if (i >= index && i < currentIndex + carouselSize) {
                     slide.style.display = "block"
                 } else {
                     slide.style.display = "none"
@@ -25,14 +25,14 @@ const Carousel = () => {
     };
     const goToNextSlide = () => {
         const nextIndex = (currentIndex + 1) % slidesLength;
-        if(nextIndex + carouselSize <= slidesLength){
+        if (nextIndex + carouselSize <= slidesLength) {
             goToSlide(nextIndex);
         }
     };
 
     const goToPrevSlide = () => {
         const prevIndex = (currentIndex - 1 + slidesLength) % slidesLength;
-        if(prevIndex + carouselSize <= slidesLength){
+        if (prevIndex + carouselSize <= slidesLength) {
             goToSlide(prevIndex);
         }
     };
@@ -73,6 +73,7 @@ const Carousel = () => {
 
     return (
         <div className="carousel">
+
             <div className="search_input">
                 <input
                     type="text"
@@ -80,12 +81,14 @@ const Carousel = () => {
                     onChange={handleInputChange}
                     placeholder='Szukaj '
                     maxLength="50"
-                    size="50"
+                    size="55"
                 />
             </div>
-
+            <div className="bookshelf">
+                <h3>Bookshelf</h3>
+            </div>
             {carouselLoading ? (<div>Carousel Loading...</div>) : (
-                <div className="carouselItems">
+                <div className="carousel_items">
                     {filteredCarouselBooks.map((book, index) => (
                         <div className={`slide slide__${index}`}
                              style={index < carouselSize ? {display: 'block'} : {display: 'none'}}
