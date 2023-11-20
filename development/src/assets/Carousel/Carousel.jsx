@@ -80,7 +80,7 @@ const Carousel = () => {
                     value={searchItem}
                     onChange={handleInputChange}
                     placeholder='Szukaj '
-                    maxLength="50"
+                    maxLength="55"
                     size="55"
                 />
             </div>
