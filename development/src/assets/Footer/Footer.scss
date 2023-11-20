@@ -1,9 +1,11 @@
 @import "../../untils/variables";
+@import "../../untils/functions";
 
-footer-container {
-  background-color: #333;
+.footer-container {
   padding: 20px;
-  color: #fff;
+  color: $base-font-color;
+  font-family:$base-font-family ;
+
 }
 
 .footer {
@@ -14,9 +16,10 @@ footer-container {
 .footer-item {
   display: flex;
   align-items: center;
+  margin-top: px-to-rem(50px);
 }
 
 .footer-item__icon {
-  margin-right: 10px;
-  font-size: 24px;
+  margin-inline: 10px;
+  font-size: 20px;
 }

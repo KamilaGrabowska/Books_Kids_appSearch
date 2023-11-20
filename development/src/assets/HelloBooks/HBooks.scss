@@ -6,14 +6,15 @@
 }
 
 h2 {
-  color: black;
+  color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
   font-style: italic;
-  color: $base-font-color;
   margin-bottom: px-to-rem(20px);
   line-height: 1.5;
   margin-left: px-to-rem(10px);
   letter-spacing: px-to-rem(1px);
-}
+ }
+
+
 

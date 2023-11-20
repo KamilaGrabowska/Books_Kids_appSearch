@@ -20,7 +20,6 @@ function App() {
             <div className="time-container">
                 <Clock/>
                 <HBooks/>
-
             </div>
 
             <div className="carousel-container">

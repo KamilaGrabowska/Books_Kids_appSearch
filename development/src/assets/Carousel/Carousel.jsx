@@ -100,8 +100,8 @@ const Carousel = () => {
                 </div>
             )}
             <div className="carousel_btn">
-                <button className="btn__prev" onClick={goToPrevSlide}>Previous</button>
-                <button className="btn__next" onClick={goToNextSlide}>Next</button>
+                <button className="btn__prev" onClick={goToPrevSlide}></button>
+                <button className="btn__next" onClick={goToNextSlide}></button>
             </div>
         </div>
     );

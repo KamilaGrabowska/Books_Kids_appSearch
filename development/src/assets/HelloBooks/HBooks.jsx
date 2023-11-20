@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useState, useEffect, useRef} from "react";
+import {HiMagnifyingGlass} from "react-icons/hi2";
 
 const HBooks = () => {
     const [text, setText] = useState("Witaj MAŁY czytelniku");
@@ -7,7 +8,7 @@ const HBooks = () => {
     useEffect(() => {
         timerRef.current = setTimeout(() => {
             setText("Czytanie książek to najpiękniejsza zabawa, jaką sobie ludzkość wymyśliła” ")
-                ;
+            ;
         }, 10000);
 
         return () => {
@@ -17,8 +18,11 @@ const HBooks = () => {
     }, []);
     return (
 
-        <h2>{text}</h2>
-)
+
+            <h2>{text}</h2>
+
+
+    )
 };
 
 export default HBooks;

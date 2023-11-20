@@ -15,24 +15,23 @@
 
 .search_input {
   margin-left: px-to-rem(10px);
-  color:$base-font-color;
+  color: $base-font-color;
 }
 
 
-
-.bookshelf{
+.bookshelf {
   margin-left: px-to-rem(10px);
 }
 
 .carousel_items {
   display: flex;
   margin-left: px-to-rem(10px);
+  margin-right: px-to-rem(10px);;
   gap: px-to-rem(15px);
 }
 
 .carousel_btn {
-
-  margin-bottom: 20px;
+  margin-top: px-to-rem(20px);
   display: flex;
   align-items: center;
   position: absolute;
@@ -40,26 +39,68 @@
   transform: translateY(-50%);
   width: 100%;
   z-index: 1;
+  gap: px-to-rem(50px);
 
+  button {
+    background-color: transparent;
+    color: $base-font-color;
+    border: none;
+    padding: px-to-rem(10px);
+    margin: 0 px-to-rem(15px);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    &.btn__prev::before {
+      left: px-to-rem(5px);
+      border-width: px-to-rem(10px) px-to-rem(20px) px-to-rem(10px) 0;
+      border-color: transparent $base-btn-color transparent transparent;
+    }
+
+    &.btn__next::after {
+      right: px-to-rem(5px);
+      border-width: px-to-rem(10px) 0 px-to-rem(10px) px-to-rem(20px);
+      border-color: transparent transparent transparent $base-btn-color;
+    }
+
+    &:hover {
+      background: transparent;
+      transform: scale(1.2);
+    }
+  }
 }
 
 
-//button {
-//  background: transparent;
-//  color: black;
-//  border: none;
-//  padding: 10px;
-//  margin:20px 20px;
-//  cursor: pointer;
-//  position: relative;
-//  transition: color 0.3s;
-//    }
+.btn__prev {
+  top: px-to-rem(20px);
+  left: px-to-rem(80px);
 
+}
 
+.btn__next {
+  top: px-to-rem(20px);
+  right: px-to-rem(-140px);;
 
-
-.btn__prev{}
-
-.btn__next{}
+}
 
 
