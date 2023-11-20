@@ -2,11 +2,10 @@
 @import "../../untils/variables";
 
 .carousel-container {
-
   display: flex;
   max-width: 100%;
   //height: 70vh;
-  margin-right: px-to-rem(10px);
+  margin-right: px-to-rem(15px);
 }
 
 .carousel {
@@ -15,7 +14,8 @@
 }
 
 .search_input {
-  margin-left: 10px;
+  margin-left: px-to-rem(10px);
+  color:$base-font-color;
 }
 
 
@@ -26,15 +26,38 @@
 
 .carousel_items {
   display: flex;
-  margin-left: 10px;
+  margin-left: px-to-rem(10px);
   gap: px-to-rem(15px);
 }
 
 .carousel_btn {
+
   margin-bottom: 20px;
   display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
 
 }
+
+
+//button {
+//  background: transparent;
+//  color: black;
+//  border: none;
+//  padding: 10px;
+//  margin:20px 20px;
+//  cursor: pointer;
+//  position: relative;
+//  transition: color 0.3s;
+//    }
+
+
+
+
 .btn__prev{}
 
 .btn__next{}

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./Carousel.scss"
 
 const Carousel = () => {
-    const carouselSize = 3;
+    const carouselSize = 2;
     const [currentIndex, setCurrentIndex] = useState(0)
     const [slidesLength, setSlidesLength] = useState(0)
 
@@ -94,7 +94,7 @@ const Carousel = () => {
                         <div className={`slide slide__${index}`}
                              style={index < carouselSize ? {display: 'block'} : {display: 'none'}}
                         >
-                            <img src={book.cover} width={200} height={200} alt=""/>
+                            <img src={book.cover} width={180} height={200} alt=""/>
                         </div>)
                     )}
                 </div>

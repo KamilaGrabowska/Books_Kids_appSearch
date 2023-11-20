@@ -2,7 +2,7 @@
 @import "../../untils/variables";
 
 .time-container{
-  background-color:rgb(255,192,203);
+  background-color:rgb(127,255,212);
   border: px-to-rem(1px) solid lightcyan;
   border-bottom-left-radius: px-to-rem(400px);
   border-bottom-right-radius: px-to-rem(400px);
@@ -14,5 +14,5 @@ p {
   display: flex;
   justify-content: flex-end;
   margin-right: px-to-rem(10px);
-  color: mediumpurple;
+  color: $base-font-color;
   }
