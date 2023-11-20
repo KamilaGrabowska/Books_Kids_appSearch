@@ -1,5 +1,6 @@
 @use "sass:map";
+@import "functions";
 
-//@media screen and (min-width: 767px) {
-//
-//}
+@media screen and (min-width: px-to-rem(600px)){
+  display: block;
+}
