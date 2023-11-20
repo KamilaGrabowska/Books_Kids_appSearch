@@ -5,7 +5,7 @@
 
   display: flex;
   max-width: 100%;
-  height: 70vh;
+  //height: 70vh;
   margin-right: px-to-rem(10px);
 }
 
@@ -26,8 +26,8 @@
 
 .carousel_items {
   display: flex;
-  margin-left: 20px;
-  gap: px-to-rem(30px);
+  margin-left: 10px;
+  gap: px-to-rem(15px);
 }
 
 .carousel_btn {

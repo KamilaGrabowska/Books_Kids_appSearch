@@ -82,6 +82,7 @@ const Carousel = () => {
                     placeholder='Szukaj '
                     maxLength="55"
                     size="55"
+                    style={{ border: 'none', background: 'transparent' }}
                 />
             </div>
             <div className="bookshelf">
@@ -93,7 +94,7 @@ const Carousel = () => {
                         <div className={`slide slide__${index}`}
                              style={index < carouselSize ? {display: 'block'} : {display: 'none'}}
                         >
-                            <img src={book.cover} alt=""/>
+                            <img src={book.cover} width={200} height={200} alt=""/>
                         </div>)
                     )}
                 </div>
