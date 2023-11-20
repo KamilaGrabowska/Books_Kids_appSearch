@@ -1,6 +1,19 @@
-h2{
-  color:black;
-  font-family: "Times New Roman",sans-serif;
-  font-size: 16px;
+@import "../../untils/functions";
+@import "../../untils/variables";
+
+.time-container {
+
+}
+
+h2 {
+  color: black;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-style: italic;
+  color: $base-font-color;
+  margin-bottom: px-to-rem(20px);
+  line-height: 1.5;
+  margin-left: px-to-rem(10px);
+  letter-spacing: px-to-rem(1px);
 }
 
