@@ -2,6 +2,9 @@ import React, {useState, useEffect} from "react";
 import "./Footer.scss"
 import "../../untils/functions.scss"
 import "../../untils/variables.scss"
+import { ImBooks } from "react-icons/im";
+import { FaSearch } from "react-icons/fa";
+import { FaPenNib } from "react-icons/fa";
 
 function Footer() {
 
@@ -10,16 +13,22 @@ function Footer() {
 
         <div className="footer">
             <div className="footer-item">
-                <i className="footer-item__icon">Ikona1</i>
-                {/*<span>Element 1</span>*/}
+                <i className="footer-item__icon">
+                    <ImBooks />
+                </i>
+
             </div>
             <div className="footer-item">
-                <i className="footer-item__icon">Ikona2</i>
-                {/*<span>Element 2</span>*/}
+                <i className="footer-item__icon">
+                    <FaSearch />
+                </i>
+
             </div>
             <div className="footer-item">
-                <i className="footer-item__icon">Ikona3</i>
-                {/*<span>Element 3</span>*/}
+                <i className="footer-item__icon">
+                    <FaPenNib />
+                </i>
+
             </div>
         </div>
 

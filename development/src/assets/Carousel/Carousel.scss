@@ -26,6 +26,11 @@
 
 .bookshelf {
   margin-left: px-to-rem(10px);
+  }
+
+h3{
+  font-family:$base-font-family;
+  font-weight: 200;
 }
 
 .carousel_items {
@@ -98,13 +103,13 @@
 
 
 .btn__prev {
-  top: px-to-rem(20px);
+  top: px-to-rem(150px);
   left: px-to-rem(80px);
 
 }
 
 .btn__next {
-  top: px-to-rem(20px);
+  top: px-to-rem(150px);
   right: px-to-rem(-140px);;
 
 }

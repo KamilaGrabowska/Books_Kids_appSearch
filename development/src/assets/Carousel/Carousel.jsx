@@ -83,7 +83,7 @@ const Carousel = () => {
                     placeholder='Szukaj ksiązki'
                     maxLength="55"
                     size="55"
-                    style={{ border: 'none', background: 'transparent' }}
+                    style={{border: 'none', background: 'transparent'}}
                 />
             </div>
             <div className="bookshelf">
@@ -95,7 +95,10 @@ const Carousel = () => {
                         <div className={`slide slide__${index}`}
                              style={index < carouselSize ? {display: 'block'} : {display: 'none'}}
                         >
-                            <img src={book.cover} width={180} height={200} alt=""/>
+                            <img src={book.cover} width={180} height={200} alt="books" style={
+                                {borderRadius: "10px"}}
+
+                            />
                         </div>)
                     )}
                 </div>
@@ -103,6 +106,7 @@ const Carousel = () => {
             <div className="carousel_btn">
                 <button className="btn__prev" onClick={goToPrevSlide}></button>
                 <button className="btn__next" onClick={goToNextSlide}></button>
+
             </div>
         </div>
     );

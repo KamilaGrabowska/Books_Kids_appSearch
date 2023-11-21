@@ -2,7 +2,7 @@
 @import "../../untils/functions";
 
 .footer-container {
-  padding: 20px;
+  padding: px-to-rem(20px);
   color: $base-font-color;
   font-family:$base-font-family ;
 
@@ -10,16 +10,17 @@
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: px-to-rem(90px);
 }
 
 .footer-item {
   display: flex;
   align-items: center;
-  margin-top: px-to-rem(50px);
+  margin-top: px-to-rem(100px);
 }
 
 .footer-item__icon {
-  margin-inline: 10px;
-  font-size: 20px;
+  margin-inline: px-to-rem(10px);
+  font-size: px-to-rem(20px);
 }
