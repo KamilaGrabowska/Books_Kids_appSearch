@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import iconReading from "../Images/readingBoy.jpeg"
+import readingBoy from "../Images/readingBoy.jpeg"
 
 const HBooks = () => {
     const [text, setText] = useState("Witaj MAŁY czytelniku");
@@ -21,7 +21,7 @@ const HBooks = () => {
             <>
                 <h2>{text}</h2>
                 <div className="child_picture">
-                    <img src={iconReading} width={100} height={100} alt="Czytające dziecko"
+                    <img src={readingBoy} width={130} height={130} alt="Czytające dziecko"
                     style={{
 
                         borderRadius:"60px"

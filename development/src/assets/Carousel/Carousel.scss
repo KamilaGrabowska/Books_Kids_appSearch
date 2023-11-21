@@ -10,19 +10,24 @@
 }
 
 
-
 .carousel {
   justify-content: center;
+  align-items: center;
   max-width: px-to-rem(400px);
-}
+  }
 
 .search_input {
   margin-top: px-to-rem(20px);
-  margin-left: px-to-rem(10px);
-  font-size:$base-font-size;
-  color: white;
-  display: flex;
+  margin-left: px-to-rem(5px);
+  font-size:px-to-rem(14px);
+  font-weight:100;
+
+
+  ::-webkit-input-placeholder{
+    color: $base-plh-color;
   }
+
+}
 
 .add_book{
   justify-content: flex-end;
@@ -30,6 +35,7 @@
   margin-top: px-to-rem(10px);
   margin-bottom: px-to-rem(5px);
   margin-left: px-to-rem(20px);
+  color: $second-font-color;
 }
 
 
@@ -39,14 +45,19 @@
 
 h3{
   font-family:$base-font-family;
-  font-weight: 200;
+  font-weight: 300;
+  color: $second-font-color;
+  line-height: 1.7;
+  letter-spacing: px-to-rem(1px);
+  font-size: px-to-rem(20px);
+
 }
 
 .carousel_items {
   display: flex;
   margin-left: px-to-rem(10px);
-  margin-right: px-to-rem(10px);;
-  gap: px-to-rem(15px);
+  margin-right: px-to-rem(15px);;
+  gap: px-to-rem(10px);
 }
 
 
@@ -63,7 +74,7 @@ h3{
 
   button {
     background-color: transparent;
-    color: $base-font-color;
+    color: $base-btn-color ;
     border: none;
     padding: px-to-rem(10px);
     margin: 0 px-to-rem(15px);
@@ -100,7 +111,7 @@ h3{
     &.btn__next::after {
       right: px-to-rem(5px);
       border-width: px-to-rem(10px) 0 px-to-rem(10px) px-to-rem(20px);
-      border-color: transparent transparent transparent $base-btn-color;
+      border-color: transparent transparent transparent $base-btn-color ;
     }
 
     &:hover {
