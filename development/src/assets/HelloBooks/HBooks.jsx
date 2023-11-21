@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import {HiMagnifyingGlass} from "react-icons/hi2";
+import readingBoy from "../Images/readingBoy.jpeg"
 
 const HBooks = () => {
     const [text, setText] = useState("Witaj MAŁY czytelniku");
@@ -18,8 +18,17 @@ const HBooks = () => {
     }, []);
     return (
 
+            <>
+                <h2>{text}</h2>
+                <div className="child_picture">
+                    <img src={readingBoy} width={100} height={100} alt="Czytające dziecko"
+                    style={{
 
-            <h2>{text}</h2>
+                        borderRadius:"60px"
+                    }}/>
+                </div>
+            </>
+
 
 
     )

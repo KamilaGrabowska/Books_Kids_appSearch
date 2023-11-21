@@ -6,7 +6,10 @@
   max-width: 100%;
   //height: 70vh;
   margin-right: px-to-rem(15px);
+  font-family:$base-font-family;
 }
+
+
 
 .carousel {
   justify-content: center;
@@ -14,9 +17,11 @@
 }
 
 .search_input {
+  margin-top: px-to-rem(20px);
   margin-left: px-to-rem(10px);
   color: $base-font-color;
-}
+  font-family:$base-font-family;
+  }
 
 
 .bookshelf {
@@ -29,6 +34,7 @@
   margin-right: px-to-rem(10px);;
   gap: px-to-rem(15px);
 }
+
 
 .carousel_btn {
   margin-top: px-to-rem(20px);

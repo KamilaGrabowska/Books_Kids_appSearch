@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./Carousel.scss"
+import readingBoy from "../Images/readingBoy.jpeg"
 
 const Carousel = () => {
     const carouselSize = 2;
@@ -79,7 +80,7 @@ const Carousel = () => {
                     type="text"
                     value={searchItem}
                     onChange={handleInputChange}
-                    placeholder='Szukaj '
+                    placeholder='Szukaj ksiązki'
                     maxLength="55"
                     size="55"
                     style={{ border: 'none', background: 'transparent' }}
