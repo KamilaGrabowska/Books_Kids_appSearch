@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./Carousel.scss"
-import readingBoy from "../Images/readingBoy.jpeg"
+import { FaPlus } from "react-icons/fa";
+
 
 const Carousel = () => {
     const carouselSize = 2;
@@ -81,11 +82,17 @@ const Carousel = () => {
                     value={searchItem}
                     onChange={handleInputChange}
                     placeholder='Szukaj ksiązki'
-                    maxLength="55"
-                    size="55"
-                    style={{border: 'none', background: 'transparent'}}
+                    maxLength="40"
+                    size="40"
+                    style={{border: 'none', background: 'transparent', fontFamily:'Arial', fontSize:'16px'} }
                 />
+
+                <i className="add_book">
+                    <FaPlus />
+                </i>
+
             </div>
+
             <div className="bookshelf">
                 <h3>Bookshelf</h3>
             </div>
@@ -106,7 +113,6 @@ const Carousel = () => {
             <div className="carousel_btn">
                 <button className="btn__prev" onClick={goToPrevSlide}></button>
                 <button className="btn__next" onClick={goToNextSlide}></button>
-
             </div>
         </div>
     );

@@ -19,9 +19,18 @@
 .search_input {
   margin-top: px-to-rem(20px);
   margin-left: px-to-rem(10px);
-  color: $base-font-color;
-  font-family:$base-font-family;
+  font-size:$base-font-size;
+  color: white;
+  display: flex;
   }
+
+.add_book{
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: px-to-rem(10px);
+  margin-bottom: px-to-rem(5px);
+  margin-left: px-to-rem(20px);
+}
 
 
 .bookshelf {
@@ -46,7 +55,7 @@ h3{
   display: flex;
   align-items: center;
   position: absolute;
-  top: 50%;
+  //top: 50%;
   transform: translateY(-50%);
   width: 100%;
   z-index: 1;
@@ -103,13 +112,13 @@ h3{
 
 
 .btn__prev {
-  top: px-to-rem(150px);
+  top: 0;
   left: px-to-rem(80px);
 
 }
 
 .btn__next {
-  top: px-to-rem(150px);
+  top: 0;
   right: px-to-rem(-140px);;
 
 }

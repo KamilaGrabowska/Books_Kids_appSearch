@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import readingBoy from "../Images/readingBoy.jpeg"
+import iconReading from "../Images/readingBoy.jpeg"
 
 const HBooks = () => {
     const [text, setText] = useState("Witaj MAŁY czytelniku");
@@ -7,7 +7,7 @@ const HBooks = () => {
 
     useEffect(() => {
         timerRef.current = setTimeout(() => {
-            setText("Czytanie książek to najpiękniejsza zabawa, jaką sobie ludzkość wymyśliła” ")
+            setText( '"Czytanie książek to najpiękniejsza zabawa, jaką sobie ludzkość wymyśliła"')
             ;
         }, 10000);
 
@@ -21,7 +21,7 @@ const HBooks = () => {
             <>
                 <h2>{text}</h2>
                 <div className="child_picture">
-                    <img src={readingBoy} width={100} height={100} alt="Czytające dziecko"
+                    <img src={iconReading} width={100} height={100} alt="Czytające dziecko"
                     style={{
 
                         borderRadius:"60px"
