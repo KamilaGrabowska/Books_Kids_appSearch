@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import readingBoy from "../Images/readingBoy.jpeg"
+// import iconReading from "../Images/iconReading.jpeg"
 
 const HBooks = () => {
     const [text, setText] = useState("Witaj MAŁY czytelniku");
