@@ -3,138 +3,140 @@
 
 
 .carousel-container {
-  display: flex;
   max-width: 100%;
   height: 46vh;
-  font-family:$base-font-family;
+  font-family: $base-font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
+  .carousel {
+    max-width: px-to-rem(400px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &_btn {
+      margin-top: px-to-rem(20px);
+      display: flex;
+      align-items: center;
+      //position: absolute;
+      transform: translateY(-50%);
+      width: 100%;
+      z-index: 1;
+      gap: px-to-rem(70px);
+
+      button {
+        background-color: transparent;
+        color: $base-btn-color;
+        border: none;
+        padding-right: px-to-rem(20px);
+        padding-left: px-to-rem(15px);
+        margin: 0 px-to-rem(5px);
+        cursor: pointer;
+        //position: relative;
+        transition: color 0.3s;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+
+        }
+
+        &.btn__prev::before {
+          left: px-to-rem(5px);
+          border-width: px-to-rem(10px) px-to-rem(20px) px-to-rem(10px) 0;
+          border-color: transparent $base-btn-color transparent transparent;
+        }
+
+        &.btn__next::after {
+          right: px-to-rem(5px);
+          border-width: px-to-rem(10px) 0 px-to-rem(10px) px-to-rem(20px);
+          border-color: transparent transparent transparent $base-btn-color;
+        }
+
+        &:hover {
+          background: transparent;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+
+    .btn__prev {
+      top: 0;
+      left: px-to-rem(80px);
+
+    }
+
+    .btn__next {
+      top: 0;
+      right: px-to-rem(-140px);;
+
+    }
+
+  }
 }
 
 
-.carousel {
-  //justify-content: center;
-  //align-items: center;
-  max-width: px-to-rem(400px);
-  }
 
 .search_input {
-  margin-top: px-to-rem(20px);
-  margin-left: px-to-rem(5px);
-  font-size:px-to-rem(14px);
-  font-weight:100;
+      margin-top: px-to-rem(30px);
+      margin-left: px-to-rem(5px);
+      font-size: px-to-rem(14px);
+      font-weight: 100;
 
-  ::-webkit-input-placeholder{
-    color: $base-plh-color;
-  }
-
-}
-
-.add_book{
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: px-to-rem(10px);
-  margin-bottom: px-to-rem(5px);
-  margin-left: px-to-rem(20px);
-  color: $second-font-color;
-}
-
-
-.bookshelf {
-  margin-left: px-to-rem(10px);
-  }
-
-h3{
-  font-family:$base-font-family;
-  font-weight: 300;
-  color: $second-font-color;
-  line-height: 1.7;
-  letter-spacing: px-to-rem(1px);
-  font-size: px-to-rem(20px);
-
-}
-
-.carousel_items {
-  display: flex;
-  margin-left: px-to-rem(10px);
-  margin-right: px-to-rem(15px);;
-  gap: px-to-rem(10px);
-}
-
-
-.carousel_btn {
-  margin-top: px-to-rem(20px);
-  display: flex;
-  align-items: center;
-  position: absolute;
-  //top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  z-index: 1;
-  gap: px-to-rem(70px);
-
-  button {
-    background-color: transparent;
-    color: $base-btn-color ;
-    border: none;
-    padding-right: px-to-rem(20px);
-    padding-left: px-to-rem(15px);
-    margin: 0 px-to-rem(5px);
-    cursor: pointer;
-    position: relative;
-    transition: color 0.3s;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0;
-      height: 0;
-      border-style: solid;
+      ::-webkit-input-placeholder {
+        color: $base-plh-color;
+      }
 
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0;
-      height: 0;
-      border-style: solid;
+    .add_book {
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-top: px-to-rem(10px);
+      margin-bottom: px-to-rem(5px);
+      margin-left: px-to-rem(20px);
+      color: $second-font-color;
+    }
+
+
+    .bookshelf {
+      margin-left: px-to-rem(10px);
+    }
+
+    h3 {
+      font-family: $base-font-family;
+      font-weight: 300;
+      color: $second-font-color;
+      line-height: 1.7;
+      letter-spacing: px-to-rem(1px);
+      font-size: px-to-rem(20px);
 
     }
 
-    &.btn__prev::before {
-      left: px-to-rem(5px);
-      border-width: px-to-rem(10px) px-to-rem(20px) px-to-rem(10px) 0;
-      border-color: transparent $base-btn-color transparent transparent;
+    .carousel_items {
+      display: flex;
+      margin-left: px-to-rem(10px);
+      margin-right: px-to-rem(15px);;
+      gap: px-to-rem(10px);
     }
-
-    &.btn__next::after {
-      right: px-to-rem(5px);
-      border-width: px-to-rem(10px) 0 px-to-rem(10px) px-to-rem(20px);
-      border-color: transparent transparent transparent $base-btn-color ;
-          }
-
-    &:hover {
-      background: transparent;
-      transform: scale(1.2);
-    }
-  }
-}
-
-
-.btn__prev {
-  top: 0;
-  left: px-to-rem(80px);
-
-}
-
-.btn__next {
-  top: 0;
-  right: px-to-rem(-140px);;
-
-}
-
-
