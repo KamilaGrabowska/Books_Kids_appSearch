@@ -84,7 +84,13 @@ const Carousel = () => {
                     placeholder='Szukaj ksiązki'
                     maxLength="40"
                     size="40"
-                    style={{border: 'none', background: 'transparent', fontFamily:'Arial', fontSize:'16px'} }
+                    style={{
+                        border: 'none',
+                        background: 'transparent',
+                        fontFamily:'Arial',
+                        fontSize:'16px',
+                        color:'white'
+                    } }
                 />
 
                 <i className="add_book">
