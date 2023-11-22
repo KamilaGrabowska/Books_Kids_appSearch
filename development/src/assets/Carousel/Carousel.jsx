@@ -57,7 +57,8 @@ const Carousel = () => {
             });
     }, []); //Without [] it doesn't reload the state
 
-    const handleInputChange = (e) => {
+
+        const handleInputChange = (e) => {
         const searchTerm = e.target.value;
         setSearchItem(searchTerm)
 
