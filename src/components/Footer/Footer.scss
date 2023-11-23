@@ -12,15 +12,15 @@
   display: flex;
   justify-content: space-around;
   gap: px-to-rem(90px);
-}
 
-.footer-item {
-  display: flex;
-  align-items: center;
-  margin-top: px-to-rem(100px);
-}
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-top: px-to-rem(100px);
 
-.footer-item__icon {
-  margin-inline: px-to-rem(10px);
-  font-size: px-to-rem(20px);
+    &__icon {
+      margin-inline: px-to-rem(10px);
+      font-size: px-to-rem(20px);
+    }
+  }
 }
