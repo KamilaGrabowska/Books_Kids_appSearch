@@ -90,7 +90,8 @@ const Carousel = () => {
                         background: 'transparent',
                         fontFamily:'Arial',
                         fontSize:'16px',
-                        color:'black'
+                        color:'white',
+                        padding:'5px'
                     } }
                 />
 

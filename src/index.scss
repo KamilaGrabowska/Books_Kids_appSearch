@@ -6,7 +6,7 @@
   --font-size: 16px;
   --line-height: 1.5;
   --font-weight: 300;
-  --background-image: url("assets/Images/kolorowy-krajobraz-z-chmurami-i-gorami-w-tle (1).jpeg");
+  --background-image: url("assets/Images/cloud_bgi4S.jpeg");
   --background-size: cover;
   --background-position: center;
   --background-repeat: no-repeat;
@@ -18,11 +18,10 @@
 }
 
 
-
 html, body {
   margin:  0;
   padding: 0;
-  max-width: px-to-rem(1280px);
+  //max-width: px-to-rem(1280px);
   width: 100%;
   height: 100vh;
   }
@@ -30,7 +29,7 @@ html, body {
 
 .app {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: var(--font-weight);
