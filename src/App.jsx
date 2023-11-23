@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
-import HBooks from "./assets/HelloBooks/HBooks.jsx"
-import "./assets/HelloBooks/HBooks.scss"
-import Clock from "./assets/ClockDateApp/Clock.jsx";
-import "./assets/ClockDateApp/Clock.scss"
-import Carousel from "./assets/Carousel/Carousel.jsx";
+import HBooks from "./components/HelloBooks/HBooks.jsx"
+import "./components/HelloBooks/HBooks.scss"
+import Clock from "./components/ClockDateApp/Clock.jsx";
+import "./components/ClockDateApp/Clock.scss"
+import Carousel from "./components/Carousel/Carousel.jsx";
 import "./untils/variables.scss"
-import Footer from "./assets/Footer/Footer.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 
 

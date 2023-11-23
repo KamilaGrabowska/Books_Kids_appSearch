@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
-import readingBoy from "../Images/readingBoy.jpeg"
+import readingBoy from "../../assets/Images/readingBoy.jpeg"
 // import iconReading from "../Images/iconReading.jpeg"
 
 const HBooks = () => {
