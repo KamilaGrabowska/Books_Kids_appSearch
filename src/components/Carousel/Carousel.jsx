@@ -1,12 +1,29 @@
 import React, {useState, useEffect} from "react";
 import "./Carousel.scss"
 import { FaPlus } from "react-icons/fa";
-
+import ScreenSize from "./ScreenSize.jsx";
 
 const Carousel = () => {
-    const carouselSize = 2;
+    const [carouselSize, setCarouselSize] = useState(2)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [slidesLength, setSlidesLength] = useState(0)
+
+    const screenSize = ScreenSize();
+    useEffect(() => {
+        if (screenSize.width > 400 && screenSize.width < 600 && carouselSize !== 2) {
+            setCarouselSize(2)
+            setCurrentIndex(0)
+        }
+        if (screenSize.width > 600 && screenSize.width < 800 && carouselSize !== 3) {
+            setCarouselSize(3)
+            setCurrentIndex(0)
+        }
+        if (screenSize.width > 800 && carouselSize !== 4) {
+            setCarouselSize(4)
+            setCurrentIndex(0)
+        }
+    }, [screenSize]);
+
 
     const showSlide = (index) => {
         document.querySelectorAll(".slide").forEach((slide, i) => {
