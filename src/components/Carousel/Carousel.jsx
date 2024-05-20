@@ -62,7 +62,7 @@ const Carousel = () => {
     const [searchItem, setSearchItem] = useState('')
 
     useEffect(() => {
-        fetch("https://run.mocky.io/v3/015f0406-e174-4635-a208-ecc44a62989e")
+        fetch("https://run.mocky.io/v3/67255930-4437-4eeb-9c40-f4dacd035261")
             .then((response) => response.json())
             .then((json) => {
                 setCarouselBooks(json)

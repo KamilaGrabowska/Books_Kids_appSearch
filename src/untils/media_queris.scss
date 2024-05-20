@@ -1,8 +1,8 @@
 @use "sass:map";
 @import "functions";
 
-//@media screen and (max-width: px-to-rem(1380px)){
-//  .app {
-//    width: 100%;
-//  }
-//}
+@media screen and (max-width: px-to-rem(1380px)){
+  .app {
+    width: 100%;
+  }
+}
